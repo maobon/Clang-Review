@@ -8,4 +8,6 @@ add_executable(EndOfTermReview2 topic2.c)
 add_executable(EndOfTermReview3 topic3.c)
 add_executable(EndOfTermReview4 topic4.c)
 add_executable(EndOfTermReview5 topic5.c)
+add_executable(EndOfTermReview6 topic6.c)
+add_executable(EndOfTermReview7 topic7.c)
 

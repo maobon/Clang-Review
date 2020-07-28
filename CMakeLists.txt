@@ -4,3 +4,5 @@ project(EndOfTermReview C)
 set(CMAKE_C_STANDARD 11)
 
 add_executable(EndOfTermReview1 topic1.c)
+add_executable(EndOfTermReview2 topic2.c)
+

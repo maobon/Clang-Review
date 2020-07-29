@@ -17,4 +17,6 @@ add_executable(EndOfTermReview10 topic10.c)
 add_executable(EndOfTermReview11 topic11.c)
 add_executable(EndOfTermReview12 topic12.c)
 add_executable(EndOfTermReview13 topic13.c)
+add_executable(EndOfTermReview14 topic14.c)
+add_executable(EndOfTermReview15 topic15.c)
 

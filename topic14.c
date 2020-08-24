@@ -2,7 +2,7 @@
 // Created by xin on 7/29/20.
 //
 
-// 14. ++,--的理解和使用
+// 14. ++, --的理解和使用
 
 #include <stdio.h>
 
@@ -13,7 +13,7 @@ int main() {
     m = ++i;
     n = j++;
 
-    printf("%d,%d,%d,%d\n", i, j, m, n);
+    printf("%d, %d, %d, %d\n", i, j, m, n);
 
     return 0;
 }

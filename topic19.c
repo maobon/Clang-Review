@@ -20,21 +20,26 @@ int main() {
     scanf("%f", &param);
 
     float ret = calculate(param);
-    printf("x=%.4f\ny=%.4f\n", param, ret);
+    printf("x=%.3f\ny=%.3f\n", param, ret);
 
     return 0;
 }
 
-// TODO math的方法要对一下
+// TODO math API
+// https://www.runoob.com/cprogramming/c-standard-library-math-h.html
+
 float calculate(float x) {
 
     if (x <= 0) {
+        // sin x          x <= 0
         return sinf(x);
 
-    } else if (x > 0 && x <= 10) {
-        return expf(2 * x);
+    } else if (x >= 0 && x <= 10) {
+        // (x^2 + 1)开平方 0 <= x <= 10
+        return sqrtf(powf(x, 2) + 1);
 
     } else if (x > 10) {
-        return sqrtf(powf(x, 3) + powf(x, 2) + 1);
+        // e^x            x > 10
+        return expf(x);
     }
 }

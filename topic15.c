@@ -10,9 +10,11 @@ char get_student_level(float score);
 
 int main() {
     float x = 0;
+
     do {
         puts("请输入学生成绩");
         scanf("%f", &x);
+
     } while (x < 0 || x > 100);
 
     char result = get_student_level(x);
@@ -25,12 +27,16 @@ char get_student_level(float score) {
         case 10:
         case 9:
             return 'A';
+
         case 8:
             return 'B';
+
         case 7:
             return 'C';
+
         case 6:
             return 'D';
+
         default:
             return 'E';
     }

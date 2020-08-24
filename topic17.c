@@ -6,7 +6,7 @@
 
 #include <stdio.h>
 
-#define PR printf("a=%d,b=%d\n",a,b);
+#define PR printf("a=%d, b=%d \n", a, b);
 
 void swap1(int x, int y) {
     int t;

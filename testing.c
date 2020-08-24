@@ -7,7 +7,7 @@
 int main() {
     printf("please input something ...\n");
 
-    char string[50];
+    char string[] = "";
     scanf("%s", string);
     printf("user_input:%s\n", string);
 

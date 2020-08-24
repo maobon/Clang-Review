@@ -7,16 +7,20 @@
 #include <stdio.h>
 
 int main() {
-    char c;
+
+    char ch;
 
     puts("正序");
-    for (c = 'A'; c <= (int) 'Z'; c++)
-        printf("%c", c);
+    for (ch = 'A'; (int) ch <= (int) 'Z'; ch++) {
+        printf("%c", ch);
+    }
 
     printf("\n");
+
     puts("倒序");
-    for (c = 'Z'; c >= (int) 'A'; c--)
-        printf("%c", c);
+    for (ch = 'Z'; ch >= (int) 'A'; ch--) {
+        printf("%c", ch);
+    }
 
     return 0;
 }

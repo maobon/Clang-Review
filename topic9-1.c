@@ -8,15 +8,26 @@
 
 #define N 10
 
+
 int main() {
 
     int i, j, yh[N];
 
     for (i = 0; i < N; i++) {
         yh[i] = 1;
-        for (j = i - 1; j >= 1; j--)yh[j] += yh[j - 1];
-        for (j = 1; j <= 15 - i; j++)printf("  ");
-        for (j = 0; j <= i; j++)printf("%4d", yh[j]);
+
+        for (j = i - 1; j >= 1; j--) {
+            yh[j] += yh[j - 1];
+        }
+
+        for (j = 1; j <= 15 - i; j++) {
+            printf("  ");
+        }
+
+        for (j = 0; j <= i; j++) {
+            printf("%4d", yh[j]);
+        }
+
         printf("\n");
     }
 

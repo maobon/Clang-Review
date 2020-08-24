@@ -12,10 +12,12 @@
 
 int main() {
 
-    for (int i = 0; i <= 9; ++i) {
-        for (int j = 1; j <= i; ++j) {
+    for (int i = 0; i <= 9; i++) {
+
+        for (int j = 1; j <= i; j++) {
             printf("%d*%d=%d ", j, i, j * i);
         }
+
         printf("\n");
     }
 

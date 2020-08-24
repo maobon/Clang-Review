@@ -19,8 +19,11 @@ int main() {
 
     printf("用户输入: %d\n", num);
 
+    // 百位
     int hundred = num / 100;
+    // 十位
     int ten = (num / 10) % 10;
+    // 个位
     int unit = num % 10;
 
     // printf("百位:%d 十位:%d 个位:%d\n", hundred, ten, unit);

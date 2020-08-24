@@ -21,6 +21,7 @@ int is_triangle(float a, float b, float c) {
         return 0;
 
     } else if (fabsf(a - b) < c && fabsf(a - c) < b && fabsf(b - c) < a) {
+        // abs 取绝对值
         puts("可以构成三角形");
         return 0;
 
@@ -37,9 +38,9 @@ int is_triangle(float a, float b, float c) {
  * @param c
  * @return
  */
-float calculate_area(float a, float b, float c) {
+float calculate_triangle_area(float a, float b, float c) {
     float t = (a + b + c) / 2.0;
-    return sqrtf(t * (t - a) * (t - b) * (t - c));
+    return sqrtf(t * (t - a) * (t - b) * (t - c)); // sqrtf 计算一个非负实数的平方根
 }
 
 /**
@@ -49,7 +50,7 @@ float calculate_area(float a, float b, float c) {
  * @param c
  * @return
  */
-char *get_type(float a, float b, float c) {
+char *get_triangle_type(float a, float b, float c) {
 
     if (a == b && b == c) {
         return "等边";
@@ -57,7 +58,9 @@ char *get_type(float a, float b, float c) {
     } else if (a == b || b == c || a == c) {
         return "等腰";
 
-    } else if (a * a + b * b == c * c || a * a + c * c == b * b || b * b + c * c == a * a) {
+    } else if (a * a + b * b == c * c
+               || a * a + c * c == b * b
+               || b * b + c * c == a * a) {
         return "直角";
 
     } else {
@@ -76,10 +79,10 @@ int main() {
     if (is_triangle(a, b, c) != 0)
         return 0;
 
-    float area = calculate_area(a, b, c);
+    float area = calculate_triangle_area(a, b, c);
     printf("面积: %.2f\n", area);
 
-    printf("三角形类型: %s\n", get_type(a, b, c));
+    printf("三角形类型: %s\n", get_triangle_type(a, b, c));
 
     return 0;
 }

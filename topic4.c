@@ -8,36 +8,44 @@
 
 int main() {
     puts("输入一串字符");
-    char arr[100];
-    scanf("%s", arr);
 
-    int result[5] = {0};
+    char chs[100];
+    scanf("%s", chs);
+
+    int ret[5] = {0};
 
     int index = 0;
-    while (arr[index]) {
-        char c = arr[index];
+    while (chs[index]) {
+        char ch = chs[index];
 
-        if (c == 'a' || c == 'A')
-            result[0]++;
+        // 元音 a
+        if (ch == 'a' || ch == 'A')
+            ret[0]++;
 
-        if (c == 'e' || c == 'E')
-            result[1]++;
+        // 元音 e
+        if (ch == 'e' || ch == 'E')
+            ret[1]++;
 
-        if (c == 'i' || c == 'I')
-            result[2]++;
+        // 元音 i
+        if (ch == 'i' || ch == 'I')
+            ret[2]++;
 
-        if (c == 'o' || c == 'O')
-            result[3]++;
+        // 元音 o
+        if (ch == 'o' || ch == 'O')
+            ret[3]++;
 
-        if (c == 'u' || c == 'U')
-            result[4]++;
+        // 元音 u
+        if (ch == 'u' || ch == 'U')
+            ret[4]++;
 
         index++;
     }
 
     char *title[5] = {"a,A", "e,E", "i,I", "o,O", "u,U"};
-    for (int i = 0; i < 5; ++i)
-        printf("%s=%d\n", title[i], result[i]);
+
+    for (int i = 0; i < 5; i++){
+        printf("%s=%d\n", title[i], ret[i]);
+    }
 
     return 0;
 }

@@ -8,12 +8,17 @@
 
 int main() {
 
+    // cock 公鸡
+    // hen 母鸡
+    // chicken 小鸡
     int cock, hen, chicken;
 
     for (cock = 0; cock <= 20; cock++) {
         for (hen = 0; hen <= 33; hen++) {
 
             chicken = 100 - cock - hen;
+
+            // TODO ** 7 和 4 是怎么来的 ??
             if (7 * cock + 4 * hen == 100) {
                 printf("公鸡=%d 母鸡=%d 小鸡=%d\n", cock, hen, chicken);
             }

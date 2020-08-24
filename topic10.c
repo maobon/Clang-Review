@@ -8,7 +8,7 @@
 
 int main() {
 
-    char arr[] = "World|Wide|Web";
+    char arr[] = "World\0Wide\0Web"; // '\0' 打印输出会停止
 
     // 指针(首地址) + 偏移量
     printf("%s\n%s\n%s\n", arr, arr + 6, arr + 11);

@@ -6,6 +6,12 @@
 
 #include <stdio.h>
 
+/**
+ * 最大公约数
+ * @param a
+ * @param b
+ * @return
+ */
 int cal_common_divisor(int a, int b) {
     int temp;
 
@@ -33,9 +39,8 @@ int main() {
     // 最大公约数
     int common_divisor = cal_common_divisor(num1, num2);
 
-    // 最小公倍数: 两个数乘积除以最大公约数
+    // 最小公倍数: 两个数乘积 除以 最大公约数
     int common_multiple = num1 * num2 / common_divisor;
-
 
     printf("最大公约数: %d\n最小公倍数: %d\n", common_divisor, common_multiple);
 
